@@ -6,7 +6,7 @@ Based on [express](https://github.com/expressjs/express/) and [polkadot-js/api](
 
 ## Join to play
 
-Go to [SpaceX Node](https://github.com/spacexio/spacex-node), follow the README.
+Go to [SpaceX Script](https://github.com/spacexio/spacex-script), follow the README.
 
 ## Building
 
