@@ -1,11 +1,11 @@
-import {Request, Response, NextFunction} from 'express';
-import {ApiPromise, WsProvider} from '@polkadot/api';
-import {typesBundleForPolkadot} from '@crustio/type-definitions';
-import {blockHash, header, health} from './chain';
-import {register, reportWorks, workReport, code, identity} from './storage';
-import {file} from './market';
-import {loadKeyringPair, resHandler, withApiReady} from './util';
-import {logger} from '../log';
+import { Request, Response, NextFunction } from 'express';
+import { ApiPromise, WsProvider } from '@polkadot/api';
+import { typesBundleForPolkadot } from '@spacex/type-definitions';
+import { blockHash, header, health } from './chain';
+import { register, reportWorks, workReport, code, identity } from './storage';
+import { file } from './market';
+import { loadKeyringPair, resHandler, withApiReady } from './util';
+import { logger } from '../log';
 
 // TODO: Better result
 export interface TxRes {
@@ -21,8 +21,8 @@ export const initApi = () => {
     logger.info('⚠️  Disconnecting from old api...');
     api
       .disconnect()
-      .then(() => {})
-      .catch(() => {});
+      .then(() => { })
+      .catch(() => { });
   }
   api = newApiPromise();
   api.isReady.then(api => {
