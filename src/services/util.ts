@@ -52,16 +52,7 @@ export async function sendTx(tx: SubmittableExtrinsic, krp: KeyringPair) {
                 new Uint8Array([mod.index.toNumber(), mod.error.toNumber()])
               );
               result.message = `${error.section}.${error.name}`;
-              // console.log({error});
-              // args: string[];
-              // docs: string[];
-              // fields: SiField[];
-              // index: number;
-              // method: string;
-              // name: string;
-              // section: string;
-              // result.details = error.documentation.join('');
-              result.details = error.docs.join('');
+              result.details = error.documentation.join('');
             }
 
             logger.info(
