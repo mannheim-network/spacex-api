@@ -7,7 +7,7 @@ WORKDIR /usr/src/spacex-api
 COPY . .
 
 # Install dependencies
-RUN yarn && yarn build
+RUN npm install && npm run build
 
 # Run
-ENTRYPOINT yarn start $ARGS
+ENTRYPOINT npm start $ARGS
